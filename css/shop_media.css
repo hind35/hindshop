@@ -1,0 +1,70 @@
+@media screen and (min-width: 768px){
+ .myFace{
+position: absolute;
+
+ }
+
+}
+ @media screen and (max-width: 768px){
+.contact form{
+	width: 100% !important;
+	/*background-color: blue*/
+}
+.location{
+	position: relative;
+	right: 0;
+	width: 100%;
+}
+.box-info{
+	width: 100%;
+ }
+}
+@media screen and (max-width: 991px){
+.colorNav.wight{
+	position: fixed;
+	padding: 10px;
+}
+ .toggle{
+ 		display: block;
+}
+.item{
+ 		display: none;
+ 	}
+.imgsize{
+	margin-top: 55px;
+}
+.videos video{
+	max-width: 90%;
+}
+.imgsize img{
+	margin-right:0 !important;
+	width: 150px;
+	height: 120px;
+}
+.imgsize span{
+	margin-top: 63px;
+}
+.myFace{
+width: 100%;
+	}
+header{
+	display: block;
+}
+.osameNav{
+display: block;
+position: fixed;
+width: 100%;
+
+}
+.icon-cont{
+	margin-left: 43% !important
+}
+.footer-icons {
+    position: relative;
+    }
+.footer-box{
+ 	display: flex;
+	align-content: center;
+	justify-content: center
+ }
+}

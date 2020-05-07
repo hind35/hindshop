@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shop</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/magnific-popup.css">
+	<link href="https://cdn.jsdelivr.net/npm/remixicon@2.4.0/fonts/remixicon.css" rel="stylesheet">
+	  <link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/shop.css">
+	<link rel="stylesheet" type="text/css" href="css/mode_white.css">
+	<link rel="stylesheet" type="text/css" href="css/global.css">
+	<link rel="stylesheet" type="text/css" href="css/shop_media.css">
+	
+</head>
+<body>
+<div id="pagepiling">
+<div  id="app">
+
+	<div class="colorNav" :class="isOpen ? 'black' : 'wight' ">
+<div class="container">
+<header>
+	<nav class="myNavbar">
+		<h2>HIND<span>STORE</span></h2>
+		<ul class="item-links">
+			<li class="item"><a href="#" data-value="Home">Home</a></li>
+			<li class="item"><a href="#" data-value="ser">Services</a></li>
+			<li class="item"><a href="#" data-value="prod">Prodact</a></li>
+			<li class="item"><a href="#" data-value="about">About Us</a></li>
+			<li class="item"><a href="#" data-value="teams">Team</a></li>
+			<li class="item"><a href="#" data-value="contact">Contact</a></li>
+			<li class="item"><a href="#" data-value="footer">Footer</a></li>
+		</ul>
+<!-- start chande mode -->
+			
+		<!-- end chande mode -->
+		<div class="toggle" @click="isOpen = !isOpen">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+</nav>
+</header>
+
+</div>
+</div>
+<div class="opction">
+	<div class="myMode opction2">
+			<div class="dark" data-value="css/mode_dark.css">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.38 2.019a7.5 7.5 0 1 0 10.6 10.6C21.662 17.854 17.316 22 12.001 22 6.477 22 2 17.523 2 12c0-5.315 4.146-9.661 9.38-9.981z"/></svg>
+				<span>Dark</span>
+			</div>
+			<div class="light"  data-value="css/mode_white.css">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></svg>
+				<span>Wight</span>
+			</div>
+	</div>
+		<i class="fa fa-gear fa-3x mode"></i>
+</div>
+ <div class="sideNavbar " :class="isOpen ? 'open' : 'close' ">
+	<div class="osameNav">
+	<div class="Boxcenter">
+		<ul>
+			<li><a href="#" data-value="Home">Home</a></li>
+			<li><a href="#" data-value="ser">Services</a></li>
+			<li><a href="#" data-value="prod">Prodact</a></li>
+			<li><a href="#" data-value="about">About Us</a></li>
+			<li><a href="#" data-value="teams">Team</a></li>
+			<li><a href="#" data-value="contact">Contact</a></li>
+			<li><a href="#" data-value="footer">Footer</a></li>
+		</ul>
+		</div>
+		<div class="wrapper">
+		<div class="box">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</div>
+</div> 
+
+<!-- osam header -->
+<!-- start header -->
+<section class="myFace2 " id="home">
+<div class="myFace">
+	<div class="container">
+		<div class="row myhome wow fadeInDown animated" data-wow-duration="1s">
+			<div class="col-lg-6 col-md-12 col-sm-12 content">
+				<h3 class="upper">Are You Read To</h3>
+				<h2 class="upper" :style="{'--textColor':color}"> New Nike Shoes</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor mauris ac nulla interdum .Lorem ipsum dolor sit amet,</p>
+				<button :style="{'--shooseColor':color}" class="light">Add To Card</button>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12">
+				<!-- <div class="img shooseActive"></div> -->
+				<img v-bind:src="'img/'+img" class="img-thumbnail">
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+			</div>
+			<div class="col-lg-6 col-md-12">
+
+				<div class="imgsize  wow fadeInUp animated" data-wow-duration="1s">
+					<span class="shoosePrise" :style="{'--textColor':color}">$186,9</span>
+				<img src="img/blue.png" class="imgchoose img-thumbnail" data-color="linear-gradient(45deg, #0136af, #22abfa)" @click="ColorImg" data-img="blue.png" >
+				<img src="img/green.png" class="imgchoose img-thumbnail" data-color="linear-gradient(45deg, #11998e, #1ce669)" @click="ColorImg" data-img="green.png">
+				<img src="img/orange.png" class="imgchoose img-thumbnail" data-color="linear-gradient(45deg, #fc4a1a, #f7b733)" @click="ColorImg" data-img="orange.png">
+				</div>
+			</div>
+</div>
+</div>
+</div>
+</section>
+<!-- end our header -->
+<!-- start prodact -->
+<!-- start our serves -->
+<section class="myS2" id="prod" >
+<div class="our-product">
+	<div class="container">
+		<h2 class="upper line">our products</h2>
+		<div class="row shoes-hidden wow fadeInUp animated" data-wow-duration="1s">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<span class="sell">SELL</span>
+	         		<img src="img/shoes/5.jpeg" class="img-thumbnail" >
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> RUNNING SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         		</div>
+	         		<span>$30,00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/s1.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$298,5</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<span class="sell">SELL</span>
+	         		<img src="img/about3.jpeg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         		</div>
+	         		<span>$50.00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<span class="sell">NEW</span>
+	         		<img src="img/shoes/a1.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         		</div>
+	         		<span>$60,67</span>
+	         	</div>
+         	</div>
+         </div>
+
+         <div class="row shoes-hidden wow fadeInUp animated" data-wow-duration="1.6s">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/44.jpg" class="img-thumbnail" >
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         		</div>
+	         		<span>$60,00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         			<span class="sell">NEW</span>
+	         		<img src="img/shoes/s2.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> RUNNING SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$398,5</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<span class="sell">SELL</span>
+	         		<img src="img/shoes/3.jpeg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-o"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$40.00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/s1.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$28,67</span>
+	         	</div>
+         	</div>
+         </div>
+
+         <div class="row  shoes-hidden wow fadeInUp animated" data-wow-duration="2s">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/5.jpeg" class="img-thumbnail" >
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span>RUNNING SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         		</div>
+	         		<span>$30,00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/s12.jpg" class="img-thumbnail">
+	         			<span class="sell">SELL</span>
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> SPORT SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$298,5</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<img src="img/shoes/a3.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> RUNNING SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-half-o"></i>
+	         		</div>
+	         		<span>$50.00</span>
+	         	</div>
+         	</div>
+         		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+	         	<div class="prodact-info">
+	         		<span class="sell">NEW</span>
+	         		<img src="img/shoes/aaa.jpg" class="img-thumbnail">
+	         		<div class="icons">
+	         			<a href="#"><i class="fa fa-eye" title="Quick Shop"></i></a>
+	         			<a href="#"><i class="fa fa-heart-o" title="Add To Wishlist"></i></a>
+	         			<a href="#"><i class="fa fa-shopping-cart" title=" Add To Card"></i></a>
+         			</div>
+	         	</div>
+	         	<div class="pro-prise">
+	         		<span> RUNNING SHOSE</span>
+	         		<div class="star">
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star"></i>
+	         			<i class="fa fa-star-o"></i>
+	         			<i class="fa fa-star-o"></i>
+	         			<i class="fa fa-star-o"></i>
+	         		</div>
+	         		<span>$39,77</span>
+	         	</div>
+         	</div>
+         </div>
+    </div>
+  </div>
+  </section>       		
+<!-- end product -->
+<!-- start our serves -->
+<section class="myS2" id="ser">
+<div class="our-serves" id="services">
+	<div class="container">
+		<h2 class="upper line">our services</h2>
+		<div class="row wow fadeInUp animated" data-wow-duration="1s">
+			<div class="col-lg-4 col-md-6 col-sm-12">
+         	<div class="info">
+         		<div class="ser">
+         		<div class="serve">
+         		 <i class="ri-time-fill"></i>
+         		 <h3>01</h3>
+         		</div>
+	          <h4>Fill Time</h4>
+	            <p> Lorem ipsum dolor sit amet,
+	          Sus pen disse auctor mauris nullage inter dum, mol estier. Lorem ips um dolor sit amet.
+	          Suspe ndisse auctor  nullage inter.</p>
+         		</div>
+			</div>
+        </div>
+         <div class="col-lg-4 col-md-6 col-sm-12">
+         	<div class="info">
+         		<div class="ser">
+         		<div class="serve">
+         		 <i class="ri-briefcase-3-line"></i>
+         		 <h3>02</h3>
+         		</div>
+	          <h4>Desgin Shoes</h4>
+	            <p> Lorem ipsum dolor sit amet,
+	          Sus pen disse auctor mauris nullage inter dum, mol estier. Lorem ips um dolor sit amet.
+	          Suspe ndisse auctor  nullage inter.</p>
+         		</div>
+			</div>
+        </div>
+         <div class="col-lg-4 col-md-6 col-sm-12">
+         	<div class="info">
+         		<div class="ser">
+         		<div class="serve">
+         		<i class="ri-code-s-slash-line"></i>
+         		 <h3>03</h3>
+         		</div>
+	          <h4>Web Desgin</h4>
+	            <p> Lorem ipsum dolor sit amet,
+	          Sus pen disse auctor mauris nullage inter dum, mol estier. Lorem ips um dolor sit amet.
+	          Suspe ndisse auctor  nullage inter.</p>
+         		</div>
+			</div>
+        </div>
+           
+		</div>
+		</div> 
+	</div>
+</section>
+<!-- end our serves -->
+<!-- start About Us -->
+<section class="myS" id="about">
+<div class="about-us" >
+	<div class="about-over">
+		<div class="container">
+		<h2 class="upper line">About Us</h2>
+		<div class="row wow fadeIn animated" data-wow-duration="1.2s">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+			<div class="myVideo">
+				<div class="over">
+	         	 <a href="#videostory" id="videolink" onclick="toggle();">
+         			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16 12l-6 6V6z"/></svg>
+         		</a>
+	         	</div>
+         		<div id="videostory" class="mfp-hide">
+         		<div class="videos">
+			      <video controls="true"  src="img/Shoes.mp4">
+			        <!-- <source src="img/Shoes.mp4" type="video/mp4">
+			        <source src="img/Shoes.mp4" type="video/ogg">
+			        <source src="img/Shoes.mp4" type="video/webm"> -->
+			    </video>
+         		</div>
+         	</div>
+
+	</div>	
+	<h1 class="upper text-center">watch a video</h1>
+        </div>
+         <div class="col-lg-6 col-md-6 col-sm-12">
+         	<div class="about-info">
+         		<h4>About Us</h4>
+	         	<p> Lorem ipsum dolor sit amet,
+		          Sus pen disse auctor mauris nullage inter dum.</p>
+		          <div class="my-tabs">
+		          <ul class="nav nav-tabs">
+		          	<li class="active">
+		          		<a href="#one" data-toggle="tab">How We Are</a>
+		          	</li>
+		          	<li>
+		          		<a href="#two" data-toggle="tab">What We Do</a>
+		          	</li>
+		          </ul>
+		          <div class="tab-content">
+		          	<div id="one" class="tab-pane active ">
+		          		<p>Lorem ipsum dolor sit amet,
+		          		Sus pen disse auctor mauris nullage inter dum.</p>
+		          		<ul>
+		          			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+		          			Lorem ipsum dolor sit amet,
+		          			Sus pen disse
+		          			</li>
+		          			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+		          			Lorem ipsum dolor sit amet,
+		          			Sus pen disse
+		          			</li>
+		          			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+		          			Lorem ipsum dolor sit amet,
+		          			Sus pen disse
+		          			</li>
+		          		</ul>
+		          	</div>
+		          	<div id="two" class="tab-pane fade ">
+		          	<p>Lorem ipsum dolor sit amet,
+		        	  Sus pen disse auctor mauris nullage inter dum.</p>
+		        	  <ul>
+		          			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+		          			Lorem ipsum dolor sit amet,
+		          			Sus pen disse
+		          			</li>
+		          			<li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"/></svg>
+		          			Lorem ipsum dolor sit amet,
+		          			Sus pen disse
+		          			</li>
+		          		</ul>
+		          	</div>
+		          </div>
+		          </div>
+         	</div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- end About Us -->
+<!-- start our Team -->
+<section class="myS2" id="teams">
+<div class="our-team">
+	<div class="container">
+		<h2 class="upper line">our team</h2>
+		<div class="row wow fadeInUp animated" data-wow-duration="1s">
+			<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+         	<div class="team">
+         		<div class="ovebrlay"></div>
+         		<div class="info-team">
+         		    <img src="img/t2.jpg" class="img-thumbnail">
+         		     <div class="icons">
+	         			<a href="#"><i class="fa fa-facebook"></i></a>
+	         			<a href="#"><i class="fa fa-twitter"></i></a>
+	         			<a href="#"><i class="fa fa-instagram"></i></a>
+         			</div>
+         		</div>
+         		<div class="name text-center">
+         			<h4>Jone Dave</h4>
+         			<small>Shoes Desgin</small>
+         		</div>
+        	</div>
+		</div>
+		<div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+         	<div class="team">
+         		<div class="overblay"></div>
+         		  <div class="info-team">
+         		    <img src="img/m3.jpg" class="img-thumbnail">
+         		     <div class="icons">
+	         			<a href="#"><i class="fa fa-facebook"></i></a>
+	         			<a href="#"><i class="fa fa-twitter"></i></a>
+	         			<a href="#"><i class="fa fa-instagram"></i></a>
+         			</div>
+         		  </div>
+         		  <div class="name text-center">
+         			<h4>Reem Ali</h4>
+         			<small>Shoes Desgin </small>
+         		</div>
+        	</div>
+		</div>
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+         	<div class="team">
+         		<div class="ovebrlay"></div>
+         		  <div class="info-team">
+         		    <img src="img/m5.jpeg" class="img-thumbnail">
+         		    <div class="icons">
+	         			<a href="#"><i class="fa fa-facebook"></i></a>
+	         			<a href="#"><i class="fa fa-twitter"></i></a>
+	         			<a href="#"><i class="fa fa-instagram"></i></a>
+         			</div>
+         		 </div>
+         		 <div class="name text-center">
+         			<h4>Teja Omair</h4>
+         			<small>Shoes Desgin</small>
+         		</div>
+        	</div>
+		</div>
+         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+         	<div class="team">
+         		<div class="ovebrlay"></div>
+         		  <div class="info-team">
+         		    <img src="img/f4.jpg" class="img-thumbnail">
+         		     <div class="icons">
+	         			<a href="#"><i class="fa fa-facebook"></i></a>
+	         			<a href="#"><i class="fa fa-twitter"></i></a>
+	         			<a href="#"><i class="fa fa-instagram"></i></a>
+         			</div>
+         		 </div>
+         		 <div class="name text-center">
+         			<h4>Nosiba Daved</h4>
+         			<small>Shoes Desgin </small>
+         		</div>
+        	</div>
+		</div>
+		</div> 
+	</div>
+</section>
+<!-- end our Team -->
+<!-- start contact -->
+<section class="myS2" id="contact">
+<div class="contact-us wow fadeIn animated" data-wow-duration="1.2s">
+	<div class="container">
+		<h2 class="upper line">contact us</h2>
+
+		<div class="row">
+				<div class="col-lg-3 col-md-6 col-sm-12">
+        	 <div class="contact-socail">
+         		<div class="box-info">
+         			<div class="socail">
+         				<div class="icon-cont">
+         					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm4.5-12.5L14 14l-6.5 2.5L10 10l6.5-2.5zM12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+         				</div>
+	         			<div>
+	         				<span>22 Salh St</span>
+	         				<span>Aelborans 6500</span>
+	         			</div>
+         			</div>
+         		</div>
+         	</div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-sm-12">
+            <div class="contact-socail">
+         		<div class="box-info">
+         			<div class="socail">
+         				<div class="icon-cont"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"/></svg></div>
+	         			<div>
+	         				<span>hind@gmail.com</span>
+	         				<span>hind886@gmail.com</span>
+	         			</div>
+         			</div>
+         		</div>
+         	</div>
+         </div>
+         <div class="col-lg-3 col-md-6 col-sm-12">
+         <div class="contact-socail">
+         		<div class="box-info">
+         			<div class="socail">
+         				<div class="icon-cont">
+         					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M6.455 19L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zm-.692-2H20V5H4v13.385L5.763 17zM8 10h8v2H8v-2z"/></svg>
+         				</div>
+	         			<div>
+	         				<span>Leave comment</span>
+	         				<span>Tail us what you think</span>
+	         			</div>
+         			</div>
+         		</div>
+        	</div>
+         </div>
+		 <div class="col-lg-3 col-md-6 col-sm-12">
+         <div class="contact-socail">
+         		<div class="box-info">
+         			<div class="socail">
+         			   <div class="icon-cont">
+         			   	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M21 16.42v3.536a1 1 0 0 1-.93.998c-.437.03-.794.046-1.07.046-8.837 0-16-7.163-16-16 0-.276.015-.633.046-1.07A1 1 0 0 1 4.044 3H7.58a.5.5 0 0 1 .498.45c.023.23.044.413.064.552A13.901 13.901 0 0 0 9.35 8.003c.095.2.033.439-.147.567l-2.158 1.542a13.047 13.047 0 0 0 6.844 6.844l1.54-2.154a.462.462 0 0 1 .573-.149 13.901 13.901 0 0 0 4 1.205c.139.02.322.042.55.064a.5.5 0 0 1 .449.498z"/></svg>
+         			   </div>
+	         			<div>
+	         				<span>+112221644</span>
+	         				<span>+923364278</span>
+	         			</div>
+         			</div>
+         		</div>
+        	</div>
+         </div>
+		</div>
+	</div>
+</div>
+
+			<div class="container">
+         	<div class="contact">
+         		<form>
+         					<div class="row wow fadeIn animated" data-wow-duration="1s">
+				<div class="col-lg-6 col-md-6">
+						<div class="form-group">
+         			<input type="text" required="">
+         			<label>Enter Your Name</label>
+         		</div>
+         	</div>
+         		<div class="col-lg-6 col-md-6">
+						<div class="form-group">
+         			<input type="email" required="" v-model="email">
+         			<label>Enter Your E-Mail</label>
+         		</div>
+         	</div>
+         	<div class=" col-md-12 col-sm-12">
+         			<div class="form-group textarea">
+         				<textarea required="" v-model="textarea"></textarea>
+         				<label>Type Your Messege</label>
+         			</div>
+         		</div>
+         		   <div class=" col-md-12 col-sm-12">
+         			<div class="ptn">
+         				<button :disabled="!email || !textarea" class="light">Send messge</button>
+         			</div>
+         		</div>
+         		</form>
+        	</div>
+		</div>
+		</div> 
+	</div>
+</section>
+<!-- end contact -->
+<!-- start footer -->
+<footer id="footer">
+		<div class="container">
+				<div class="row  wow fadeIn animated" data-wow-duration="1s">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="footer-box">
+				Desgin With <a href="#" class="hind"><i class="fa fa-heart "></i></a> By Hind 
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="footer-box">
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-google-plus-g"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer>
+<!-- end footer -->
+<div class="scroll-upp">
+	<a href="#"><i class="ri-arrow-up-s-line"></i>
+</a>
+</div>
+</div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script> -->
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="js/shop.js"></script>
+
+
+<script type="text/javascript" src="js/vue.min.js"></script>
+<script>
+var app= new Vue({
+		el:'#app',
+		data:{
+			isOpen: false,
+			select:false,
+			color:'linear-gradient(45deg, #0136af, #22abfa)',
+			img:'blue.png',
+			mode:'white.css',
+			email:null,
+			textarea:null,
+			name:null
+		},
+		methods:{
+			updataColor:function(event) {
+				this.color = event.target.getAttribute('data-color');
+			},
+			updataImg:function(event) {
+				this.img = event.target.getAttribute('data-img');
+			},
+			ColorImg:function (event) {
+				this.updataColor(event);
+				this.updataImg(event);
+			},
+		}
+		
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$('#pagepiling').pagepiling({
+		 navigation: {
+            'textColor': '#000',
+            'bulletsColor': '#000',
+            'position': 'right',
+            'tooltips': [' SERVICES', 'section2', 'section3', 'section4']
+        }
+	});
+	}); 
+</script>
+</body>
+</html>

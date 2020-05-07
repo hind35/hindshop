@@ -1,0 +1,103 @@
+body{
+	background-color: #2f2f31;
+	color: #fff;
+}
+
+.scroll-upp{
+background-color:  #CECBCB;
+box-shadow: inset 3px 0px 20px 0px rgba(255,255,255,.4);
+	}
+	.scroll-upp i {
+		color:#444; 
+	}
+	.colorNav.sticky{
+	box-shadow: 0 10px 10px -10px rgba(255,255,255,.4);
+/*	3px 0px 20px 0px rgba(255,255,255,.4);
+*/}
+#pp-nav span{
+	border-color: #fff !important;
+	border:2px solid #fff;
+}
+#pp-nav li .active span, .pp-slidesNav .active span{
+color: #fff !important;
+background-color: #fff;	
+}
+.myS2{
+	background-color: #2f2f31;
+}
+.myS2 .ser p{
+	color: #CECBCB;
+}
+.ser{
+	/*background-color: #121212;*/
+	background-color: #2f2f31;
+	border-color:#000; 
+	color: #CECBCB;
+
+}
+.colorNav.wight{
+	width: 100%;
+	background-color: #2f2f31;
+	color:#fff;
+	/*border:1px solid #606060;*/
+	border-top: none;
+	position: fixed;
+}
+.toggle span{
+	background-color:#fff;
+}
+.our-serves h4{
+	color:#F3F0F0;
+}
+.our-serves h3{
+	color: #4c4c4c;
+	    opacity: 0.4;
+}
+.ser,.about-info{
+	box-shadow: inset 3px 0px 20px 0px rgba(255,255,255,.4);
+	background-color: #2f2f31;
+}
+.about-info{
+	color:#e2e2e2 !important;
+}
+.box-info{
+	box-shadow: inset 3px 0px 20px 0px rgba(255,255,255,.4);
+	background-color: #2f2f31;
+	border: 1px solid #333;
+	}
+	.info-team .img-thumbnail ,.prodact-info .img-thumbnail{
+	    padding: 3px !important;
+    box-shadow: inset 3px 0px 20px 0px rgba(255,255,255,.4);
+    background-color: #2f2f31 !important;
+    border: 1px solid #333 !important;
+}
+	.team .name h4,.name small{
+		color: #e2e2e2 !important;
+	}
+form label , textarea ,input{
+	color: #e2e2e2 !important; 
+}
+.opction2,.mode{
+	box-shadow: inset 3px 0px 20px 0px rgba(255,255,255,.4);
+	background-color: #2f2f31;
+	border: 1px solid #333;
+    color: #fff;
+	}
+.mode{
+	border-left: none;
+	}
+.opction2{
+	border-right: none;
+}
+.item-links .item a{
+	color: #fff
+}
+.line{
+	color: #fff;
+}
+.opction2 svg {
+	fill: #fff !important;
+	)
+/*.about-info p ,.about-info h4, .about-info li a{
+	color:#e2e2e2 !important;
+}*/
